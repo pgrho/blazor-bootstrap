@@ -1,0 +1,11 @@
+﻿<div @ref="_Element"
+     class="modal @(IsFade ? "fade" : null) @ExtraClasses"
+     tabindex="-1"
+     role="dialog"
+     data-backdrop="@(Backdrop == ModalBackdrop.Disabled ? "false" :Backdrop == ModalBackdrop.Static ? "static" : "true")"
+     data-keyboard="@(HandlesKeyboard ? "true" : "false")"
+     data-focus="@(ShouldFocus ? "true" : "false")"
+     aria-hidden="true"
+     @attributes="@Attributes">
+    @ChildContent
+</div>
