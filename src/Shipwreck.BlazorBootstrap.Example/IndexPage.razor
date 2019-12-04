@@ -1,0 +1,51 @@
+﻿@page "/"
+@inherits LayoutComponentBase
+
+<button class="btn btn-primary btn-lg"
+        @onclick="@(() => _Modal.IsOpen = true)">
+    Open Modal
+</button>
+
+<Modal @ref="Modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</Modal>
+@code
+{
+    private Modal _Modal;
+
+    private Modal Modal
+    {
+        get => _Modal;
+        set
+        {
+            if (value != _Modal)
+            {
+                _Modal = value;
+                if (_Modal != null)
+                {
+                    _Modal.Showing += (s, e) => Console.WriteLine("Modal.Showing");
+                    _Modal.Shown += (s, e) => Console.WriteLine("Modal.Shown");
+                    _Modal.Hiding += (s, e) => Console.WriteLine("Modal.Hiding");
+                    _Modal.Hidden += (s, e) => Console.WriteLine("Modal.Hidden");
+                    _Modal.HidePrevented += (s, e) => Console.WriteLine("Modal.HidePrevented");
+                }
+            }
+        }
+    }
+}

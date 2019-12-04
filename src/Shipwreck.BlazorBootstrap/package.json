@@ -1,7 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "shipwreck.blazor-bootstrap",
+  "name": "shipwreck.blazorbootstrap",
   "private": true,
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "shipwreck.blazor-bootstrap.example",
+  "private": true,
+  "devDependencies": {
+    "jquery": "3.4.1",
+    "bootstrap": "4.4.1",
+    "gulp": "4.0.2",
+    "del": "5.1.0"
+  }
+}
