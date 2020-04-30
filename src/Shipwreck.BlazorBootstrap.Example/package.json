@@ -3,7 +3,7 @@
   "name": "shipwreck.blazor-bootstrap.example",
   "private": true,
   "devDependencies": {
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "bootstrap": "4.4.1",
     "gulp": "4.0.2",
     "del": "5.1.0"
